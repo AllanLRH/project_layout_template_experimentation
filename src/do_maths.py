@@ -1,14 +1,14 @@
-try:
+try:  # This won't work...
     from ahrithemetic import my_div, my_mult, my_substract, my_sum
 except ImportError:
     print("Failed for direct import")
 
-try:
+try:  # ... but this will...
     from src.ahrithemetic import my_div, my_mult
 except ImportError:
     print("Failed for src.-import")
 
-try:
+try:  # ... and so will this
     from .ahrithemetic import my_substract, my_sum
 except ImportError:
     print("Failed for dot-import")
